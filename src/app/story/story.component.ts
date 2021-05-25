@@ -29,7 +29,7 @@ export class StoryComponent implements OnInit {
     
   }
   oneClickSubmit(data){
-    if(data.name.trim().toLowerCase()=='gagarina bvd'||data.name.trim().toLowerCase()=='gagarinabvd')
+    if(data.name.trim().toLowerCase()=='gagarina bvd'||data.name.trim().toLowerCase()=='gagarinabvd'||data.name.trim().toLowerCase()=='gagarina blvd'||data.name.trim().toLowerCase()=='gagarinablvd')
     {
       this.ans1=true
       this.ans0=false;
@@ -134,24 +134,44 @@ export class StoryComponent implements OnInit {
     }
   }
   h1ClickSubmit(){
+    if(this.hint1==false)
+    {
+      this.score=this.score-1;
+    }
+
     this.hint1=true;
-    this.score=this.score-1;
   }
   h2ClickSubmit(){
+    if(this.hint2==false)
+    {
+      this.score=this.score-1;
+    }
     this.hint2=true;
-    this.score=this.score-1;
+    
   }
   h3ClickSubmit(){
+    if(this.hint3==false)
+    {
+      this.score=this.score-1;
+    }
     this.hint3=true;
-    this.score=this.score-1;
+    
   }
   h4ClickSubmit(){
+    if(this.hint4==false)
+    {
+      this.score=this.score-1;
+    }
     this.hint4=true;
-    this.score=this.score-1;
+    
   }
   h5ClickSubmit(){
+    if(this.hint5==false)
+    {
+      this.score=this.score-1;
+    }
     this.hint5=true;
-    this.score=this.score-1;
+    
   }
   
 
