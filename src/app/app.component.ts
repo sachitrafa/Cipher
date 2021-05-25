@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'game';
+  public start = false;
+  public open = true;
+  ngOnInit() {
+
+}
+InClickSubmit(){
+  this.start= true;
+  this.open= false;
+}
+
 }

@@ -1,0 +1,11 @@
+h1{
+    color: black;
+}
+p{
+    color: black;
+    font-family: 'Roboto Mono';
+}
+ng-template{
+    font-family: 'Roboto Mono';
+}
+

@@ -1,0 +1,203 @@
+<!-- Question -->
+<div class="container" style="margin-bottom: 2%;" *ngIf='ans0'>
+    <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0"  type="dark">
+      <ngb-panel title="Chapter 1" type="dark">
+        <ng-template ngbPanelContent>
+          {{name}} we are trying to solve a mystery. We are on the lookout for someone missing. We have some clues for you to analyze and decode.
+
+          Your first clue is this.
+         <span style="font-style: italic;font-weight: bold;">"holiday inn, (1200000/2)+(2*7*1000)+(7*11)"</span>
+         What is this location.
+        </ng-template>
+      </ngb-panel>
+      </ngb-accordion>
+      </div>
+      <!-- Hint -->
+      <div class="container" *ngIf='ans0'>
+        <form #h1 = "ngForm" (ngSubmit) = "h1ClickSubmit()">
+          <button type="submit" class="btn btn-dark">Hint</button>
+        </form>
+      </div>
+      <div class="container" *ngIf='hint1'>
+        <p>
+            <ngb-alert [dismissible]="false" type="warning">
+              That equation might be some type of coordinate or postal code
+            </ngb-alert>
+          </p>
+      </div>
+<!-- submit -->
+  <div class="container" *ngIf='ans0'>
+    <form #q1 = "ngForm" (ngSubmit) = "oneClickSubmit(q1.value)" >
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Address</span>
+        <input type="text" name="name" class="form-control" placeholder="Enter first part of Address only" aria-label="Name" aria-describedby="basic-addon1" ngModel>
+      </div>
+      <button type="submit" class="btn btn-dark">Enter</button>
+    </form>
+  </div>
+  <!-- Question -->
+  <div class="container">
+  <ngb-accordion #acc1="ngbAccordion" activeIds="ngb-panel-1" *ngIf='ans1' type="dark">
+    <ngb-panel title="Chapter 2" id="ngb-panel-1" type="dark">
+      <ng-template ngbPanelContent>
+        You are good {{name}}. We searched the hotel room in which he was staying. We were able to recover a note.
+        <p>Note -</p> 
+        <p style="font-weight: bold;">2*24+0.8518</p>
+        <p style="font-weight: bold;">N</p>
+        <p style="font-weight: bold;">40/2+0.9339</p>
+        <p style="font-weight: bold;">E</p>
+        <p style="font-style: italic;">What do you make of this ?</p>
+      </ng-template>
+    </ngb-panel>
+    </ngb-accordion>
+    </div>
+     <!-- Hint -->
+     <div class="container">
+      <form #h2 = "ngForm" (ngSubmit) = "h2ClickSubmit()" *ngIf='ans1'>
+        <button type="submit" class="btn btn-dark">Hint</button>
+      </form>
+    </div>
+    <div class="container" *ngIf='hint2'>
+      <p>
+          <ngb-alert [dismissible]="false" type="warning">
+            N, S maybe some type of directions.
+          </ngb-alert>
+        </p>
+    </div>
+    <!-- submit -->
+    <div class="container" *ngIf='ans1'>
+      <form #q2 = "ngForm" (ngSubmit) = "twoClickSubmit(q2.value)" >
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">Name</span>
+          <input type="text" name="name" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="basic-addon1" ngModel>
+        </div>
+        <button type="submit" class="btn btn-dark">Enter</button>
+      </form>
+    </div>
+    <!-- Question -->
+    <div class="container">
+      <ngb-accordion #acc2="ngbAccordion" activeIds="ngb-panel-2" *ngIf='ans2' type="dark">
+        <ngb-panel title="Chapter 3" id="ngb-panel-2" type="dark">
+          <ng-template ngbPanelContent>
+            Shit, it was a decoy. Nonetheless, great job {{name}}
+            <p>We have intercepted a signal which might be useful</p>
+            <p>Signal-</p>
+            <h3 style="font-weight: bold;">...-</h3>
+            <h3 style="font-weight: bold;">.-</h3>
+            <h3 style="font-weight: bold;"> -</h3>
+            <h3 style="font-weight: bold;">..</h3>
+            <h3 style="font-weight: bold;">-.-.</h3>
+            <h3 style="font-weight: bold;">.-</h3>
+            <h3 style="font-weight: bold;">-.</h3>
+            <p style="font-style: italic;">What does this mean ?</p>
+          </ng-template>
+        </ngb-panel>
+        </ngb-accordion>
+        </div>
+         <!-- Hint -->
+      <div class="container">
+        <form #h3 = "ngForm" (ngSubmit) = "h3ClickSubmit()" *ngIf='ans2'>
+          <button type="submit" class="btn btn-dark">Hint</button>
+        </form>
+      </div>
+      <div class="container" *ngIf='hint3'>
+        <p>
+            <ngb-alert [dismissible]="false" type="warning">
+              Might be morse code.
+            </ngb-alert>
+          </p>
+      </div>
+        <!-- submit -->
+        <div class="container" *ngIf='ans2'>
+          <form #q3 = "ngForm" (ngSubmit) = "threeClickSubmit(q3.value)" >
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">Decode</span>
+              <input type="text" name="name" class="form-control" placeholder="Decode" aria-label="Name" aria-describedby="basic-addon1" ngModel>
+            </div>
+            <button type="submit" class="btn btn-dark">Enter</button>
+          </form>
+        </div>
+        <!-- Question -->
+            <div class="container">
+              <ngb-accordion #acc4="ngbAccordion" activeIds="ngb-panel-3" *ngIf='ans3' type="dark">
+                <ngb-panel title="Chapter 4" id="ngb-panel-3" type="dark">
+                  <ng-template ngbPanelContent>
+                    Bravo {{name}}. We had a word with the locals in the Vatican. One person saw him and told us that he was looking for Adam. He kept on repeating that he has to <span style="font-style: italic;font-weight: bold;">find the place where Adam is.</span>
+            
+                    <p style="font-style: italic;">What place is this ?</p>
+                  </ng-template>
+                </ngb-panel>
+                </ngb-accordion>
+                </div>
+                 <!-- Hint -->
+      <div class="container">
+        <form #h4 = "ngForm" (ngSubmit) = "h4ClickSubmit()" *ngIf='ans3'>
+          <button type="submit" class="btn btn-dark">Hint</button>
+        </form>
+      </div>
+      <div class="container" *ngIf='hint4'>
+        <p>
+            <ngb-alert [dismissible]="false" type="warning">
+              Referring to a place connected to adam in the vatican.
+            </ngb-alert>
+          </p>
+      </div>
+                <!-- submit -->
+                <div class="container" *ngIf='ans3'>
+                  <form #q4 = "ngForm" (ngSubmit) = "fourClickSubmit(q4.value)" >
+                    <div class="input-group mb-3">
+                      <span class="input-group-text" id="basic-addon1">Place</span>
+                      <input type="text" name="name" class="form-control" placeholder="Place" aria-label="Name" aria-describedby="basic-addon1" ngModel>
+                    </div>
+                    <button type="submit" class="btn btn-dark">Enter</button>
+                  </form>
+                </div>
+                <!-- Question -->
+                <div class="container">
+                  <ngb-accordion #acc5="ngbAccordion" activeIds="ngb-panel-4" *ngIf='ans4' type="dark">
+                    <ngb-panel title="Chapter 5" id="ngb-panel-4" type="dark">
+                      <ng-template ngbPanelContent>
+                        
+                      Good job, sachit. We searched the property and found a small vault. But in order to open the vault, we need to put a 3 digit code in it. We also have 2 lines written behind it
+
+                        <p>Vault</p>
+                        <p>_ _ _</p>
+                        <p style="font-weight: bold;">1.There is a number in my name. I was the last supreme pontiff not even a bishop</p>
+                        <p style="font-weight: bold;">2.last one to step down in nearly 600 years. How long did I upheld my duty(approx)</p>
+                
+                        <p style="font-style: italic;">What is the code</p>
+                      </ng-template>
+                    </ngb-panel>
+                    </ngb-accordion>
+                    </div>
+                     <!-- Hint -->
+      <div class="container">
+        <form #h5 = "ngForm" (ngSubmit) = "h5ClickSubmit()" *ngIf='ans4'>
+          <button type="submit" class="btn btn-dark">Hint</button>
+        </form>
+      </div>
+      <div class="container" *ngIf='hint5'>
+        <p>
+            <ngb-alert [dismissible]="false" type="warning">
+              The statement might be related to the past leaders of the Vatican.
+            </ngb-alert>
+          </p>
+      </div>
+                    <!-- submit -->
+                    <div class="container" *ngIf='ans4'>
+                      <form #q5 = "ngForm" (ngSubmit) = "fiveClickSubmit(q5.value)" >
+                        <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1">Code</span>
+                          <input type="text" name="name" class="form-control" placeholder="Code" aria-label="Name" aria-describedby="basic-addon1" ngModel>
+                        </div>
+                        <button type="submit" class="btn btn-dark">Enter</button>
+                      </form>
+                    </div>
+                    <div class="container" *ngIf='over'>
+                      <p>
+                          <ngb-alert [dismissible]="false" type="danger">
+                            <strong>Sorry!</strong> {{name}} you used all your lives. Refresh to start again.
+                          </ngb-alert>
+                        </p>
+                    </div>
+<app-final *ngIf='ans5'></app-final>

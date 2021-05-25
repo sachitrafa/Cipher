@@ -1,0 +1,54 @@
+<div class="container">
+    <p id='final'></p>
+</div>
+<div class="container" *ngIf='final'>
+    <form #final = "ngForm" (ngSubmit) = "sixClickSubmit()" >
+      <button type="submit" class="btn btn-dark">Next</button>
+    </form>
+</div>
+<div class="container">
+    <ngb-accordion #acc6="ngbAccordion" activeIds="ngb-panel-5" *ngIf='ansfin' type="dark">
+      <ngb-panel title="Chapter 6" id="ngb-panel-5" type="dark">
+        <ng-template ngbPanelContent>
+         <span style="font-style: italic;font-weight: bold;">I will be there where all secrets lie.</span>
+
+          <p>What's this place</p>
+        </ng-template>
+      </ngb-panel>
+      </ngb-accordion>
+      </div>
+      <div class="container" *ngIf='ansfin'>
+        <form #h1 = "ngForm" (ngSubmit) = "h1ClickSubmit()">
+          <button type="submit" class="btn btn-dark">Hint</button>
+        </form>
+      </div>
+      <div class="container" *ngIf='hint1'>
+        <p>
+            <ngb-alert [dismissible]="false" type="warning">
+              Some place in the Vatican.
+            </ngb-alert>
+          </p>
+      </div>
+      <div class="container" *ngIf='ansfin'>
+        <form #q6 = "ngForm" (ngSubmit) = "sevenClickSubmit(q6.value)" >
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Place</span>
+            <input type="text" name="name" class="form-control" placeholder="Place" aria-label="Name" aria-describedby="basic-addon1" ngModel>
+          </div>
+          <button type="submit" class="btn btn-dark">Enter</button>
+        </form>
+      </div>
+      <div class="container" *ngIf='congo'>
+        <p>
+            <ngb-alert [dismissible]="false" type="success">
+              <strong>Congrats!</strong> {{name}} you have solved the mystery.
+            </ngb-alert>
+          </p>
+      </div>
+      <div class="container" *ngIf='over1'>
+        <p>
+            <ngb-alert [dismissible]="false" type="danger">
+              <strong>Sorry!</strong> {{name}} you used all your lives. Refresh to start again.
+            </ngb-alert>
+          </p>
+      </div>
