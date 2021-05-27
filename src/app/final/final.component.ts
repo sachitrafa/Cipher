@@ -49,7 +49,7 @@ export class FinalComponent implements OnInit {
     }
     else{
       this.score = this.score - 2;
-      if(this.score <= 0)
+      if(this.score < 0)
       {
         this.ansfin=false;
         this.over1=true;
@@ -62,8 +62,15 @@ export class FinalComponent implements OnInit {
     }
   }
   h1ClickSubmit(){
-    this.hint1=true;
-    this.score=this.score-1;
+    if(this.score>0)
+    {
+      if(this.hint1 == false)
+      {
+        this.score = this.score -1;
+      }
+      this.hint1 = true;
+    }
+    
   }
 
 }

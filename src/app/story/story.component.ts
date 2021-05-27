@@ -29,7 +29,7 @@ export class StoryComponent implements OnInit {
     
   }
   oneClickSubmit(data){
-    if(data.name.trim().toLowerCase()=='gagarina bvd'||data.name.trim().toLowerCase()=='gagarinabvd'||data.name.trim().toLowerCase()=='gagarina blvd'||data.name.trim().toLowerCase()=='gagarinablvd')
+    if(data.name.trim().toLowerCase()=='gagarina bvd'||data.name.trim().toLowerCase()=='gagarinabvd'||data.name.trim().toLowerCase()=='gagarina blvd'||data.name.trim().toLowerCase()=='gagarinablvd'||data.name.trim().toLowerCase()=='gagarina blvd.'|| data.name.trim().toLowerCase()=='gagarina boulevard')
     {
       this.ans1=true
       this.ans0=false;
@@ -37,7 +37,7 @@ export class StoryComponent implements OnInit {
     } 
     else{
       this.score = this.score - 2;
-      if(this.score <= 0)
+      if(this.score < 0)
       {
         this.ans0=false;
         this.over=true;
@@ -58,7 +58,7 @@ export class StoryComponent implements OnInit {
     } 
     else{
       this.score = this.score - 2;
-      if(this.score <= 0)
+      if(this.score < 0)
       {
         this.ans1=false;
         this.over=true;
@@ -79,7 +79,7 @@ export class StoryComponent implements OnInit {
     } 
     else{
       this.score = this.score - 2;
-      if(this.score <= 0)
+      if(this.score < 0)
       {
         this.ans2=false;
         this.over=true;
@@ -100,7 +100,7 @@ export class StoryComponent implements OnInit {
     } 
     else{
       this.score = this.score - 2;
-      if(this.score <= 0)
+      if(this.score < 0)
       {
         this.ans3=false;
         this.over=true;
@@ -134,43 +134,57 @@ export class StoryComponent implements OnInit {
     }
   }
   h1ClickSubmit(){
-    if(this.hint1==false)
+    if(this.score>0)
     {
-      this.score=this.score-1;
+      if(this.hint1 == false)
+      {
+        this.score = this.score -1;
+      }
+      this.hint1 = true;
     }
-
-    this.hint1=true;
   }
   h2ClickSubmit(){
-    if(this.hint2==false)
+    if(this.score>0)
     {
-      this.score=this.score-1;
+      if(this.hint2 == false)
+      {
+        this.score = this.score -1;
+      }
+      this.hint2 = true;
     }
-    this.hint2=true;
     
   }
   h3ClickSubmit(){
-    if(this.hint3==false)
+    if(this.score>0)
     {
-      this.score=this.score-1;
+      if(this.hint3 == false)
+      {
+        this.score = this.score -1;
+      }
+      this.hint3 = true;
     }
-    this.hint3=true;
     
   }
   h4ClickSubmit(){
-    if(this.hint4==false)
+    if(this.score>0)
     {
-      this.score=this.score-1;
+      if(this.hint4 == false)
+      {
+        this.score = this.score -1;
+      }
+      this.hint4 = true;
     }
-    this.hint4=true;
     
   }
   h5ClickSubmit(){
-    if(this.hint5==false)
+    if(this.score>0)
     {
-      this.score=this.score-1;
+      if(this.hint5 == false)
+      {
+        this.score = this.score -1;
+      }
+      this.hint5 = true;
     }
-    this.hint5=true;
     
   }
   
